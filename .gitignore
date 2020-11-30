@@ -4,3 +4,4 @@ src/main/resources/application_local.conf
 /project/target/
 /target/
 /target/scala-2.12/classes/
+.idea
