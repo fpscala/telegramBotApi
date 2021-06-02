@@ -1,15 +1,15 @@
-name := "telegramBotApi"
-
+name := "TelegramBotApi"
+ 
 version := "1.0"
-val Http4sVersion = "0.21.16"
-val Sttp = "3.2.3"
-scalaVersion := "2.12.8"
-useCoursier := false
-resolvers += "jitpack" at "https://jitpack.io"
-libraryDependencies ++= Seq(
-  "org.http4s"      %% "http4s-blaze-server" % Http4sVersion,
-  "org.http4s"      %% "http4s-blaze-client" % Http4sVersion,
-  "org.http4s"      %% "http4s-dsl"          % Http4sVersion,
-  "com.bot4s"       %% "telegram-core"       % "4.4.0-RC2",
-  "com.bot4s" %% "telegram-akka" % "4.4.0-RC2",
+lazy val `telegrambotapi` = (project in file(".")).enablePlugins(PlayScala)
+
+resolvers += "Akka Snapshot Repository" at "https://repo.akka.io/snapshots/"
+      
+scalaVersion := "2.13.5"
+
+libraryDependencies ++= Seq( jdbc , ehcache , ws , specs2 % Test , guice,
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.9.3",
+  "com.softwaremill.sttp.client3" %% "akka-http-backend" % "3.3.6",
+  "com.bot4s" %% "telegram-core" % "5.0.0"
 )
+      
