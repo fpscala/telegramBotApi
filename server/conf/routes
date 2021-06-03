@@ -1,5 +1,4 @@
 GET     /                           controllers.Application.index
 POST    /send-file                  @controllers.Application.sendFile
-POST    /send-message               @controllers.Application.sendMessage
 
       
