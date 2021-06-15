@@ -1,4 +1,4 @@
-src/main/resources/application_local.conf
+conf/application_local.conf
 # Project exclude paths
 /project/project/target/
 /project/target/

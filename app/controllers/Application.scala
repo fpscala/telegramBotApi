@@ -25,7 +25,7 @@ class Application @Inject()(val controllerComponents: ControllerComponents,
   = Action.async(parse.multipartFormData) { implicit request =>
     try {
       val body = request.body.asFormUrlEncoded
-      val chatId = body("chatId").head.toLong
+      val chatId = body("chat-id").head.toLong
       val caption = body("caption").headOption
       request.body.file("file") match {
         case Some(file) =>
