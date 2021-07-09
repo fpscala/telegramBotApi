@@ -9,7 +9,7 @@ import scala.concurrent.Future
 class Bot(token: String) extends TelegramBot(token) with Polling with Commands {
 
   def sendFile(id: Long, fileName: String, file: File, caption: Option[String] = None): Future[Message] = {
-    sendDocument(id, InputFile(fileName, file), caption)
+    sendDocument(id, InputFile(fileName, file), caption, parseMode = ParseMode.HTML)
   }
 
   onCommand("start") { (sender, _) =>

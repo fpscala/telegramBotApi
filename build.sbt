@@ -18,6 +18,6 @@ lazy val telegrambotapi = (project in file("."))
     crossScalaVersions := Seq(scalaVersion.value),
     libraryDependencies ++= Seq( jdbc , ehcache , ws , specs2 % Test , guice,
       "com.typesafe.scala-logging" %% "scala-logging" % "3.9.3",
-      "uz.scala" %% "bot4scala" % "1.0.4"
+      "uz.scala" %% "bot4scala" % "1.0.5"
     )
   ).enablePlugins(PlayScala)
